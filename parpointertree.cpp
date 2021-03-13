@@ -1,10 +1,10 @@
 /*
 
     Parent Pointer Tree
-
     Project Treeps
-
     Ross Klonowski
+    3/14/21
+
 */
 
 #include "stdc++.h"
@@ -196,12 +196,6 @@ int main() {
     int parentsIndexTemp_custom[] = {  -1,  25,   1,  13,  -1,   8,   19,  19,  21,  1,   11,  0,   10, -1,   13,  13,  13,  1,   12,  8,   8,   4,   17,  2,   3, -1};
     std::string labelsTemp_custom[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
     int weightsTemp_custom[size_custom];
-    
-    // initialize the 26 node slim tree
-    // int size = 26;
-    // int parentsIndexTemp[] = {  -1,  0,   1,  2,  3,   4,   5,  6,  7,  8,   9,  10,   11, 12,   13,  14,  15,  16,   17,  18,   19,   20,   21,  22,   23, 24};
-    // std::string labelsTemp[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
-    //int weightsTemp[size];
 
     // initialize the tree
     int size_1 = 10;
@@ -239,7 +233,7 @@ int main() {
     }
     int weightsTemp_3[size_3];
 
-    // create a new instance of the test tree
+    // create a new instances of the test tree
     ParentPointerTree myTree1(size_1, parentsIndexTemp_1, labelsTemp_1, weightsTemp_1);
     ParentPointerTree myTree2(size_2, parentsIndexTemp_2, labelsTemp_2, weightsTemp_2);
     ParentPointerTree myTree3(size_3, parentsIndexTemp_3, labelsTemp_3, weightsTemp_3);
@@ -254,32 +248,9 @@ int main() {
     weightTest(myTree1, 0);
     weightTest(myTree2, 0);
     weightTest(myTree3, 0);
-    
+
     // weighted union tests
     unionTest(myTreeCustom, 25, 13);
-    // std::cout << "\n\nWeighted Union Tests" << std::endl;
-    // std::cout << "-------------------------" << std::endl;
-    // int node1 = 0;
-    // int node2 = 0;
-    
-    // node1 = 13;
-    // node2 = 0;
-
-    // start = clock();
-
-    // std::cout << "Union " << node1 << " and " << node2 << std::endl;
-    
-    // //std::cout << "Before: " << std::endl;
-    // //myTree.printArrays();
-    
-    // //myTree.unionNodes(node1, node2);
-
-    // end = clock();
-    // time_taken = double(end - start) / double(CLOCKS_PER_SEC);
-    // std::cout << "Time taken by program is : " << std::fixed << time_taken*100000 << std::setprecision(5)  << "us" << std::endl;
-
-    // //std::cout << "After: " << std::endl;
-    // //myTree.printArrays();
 
     return 0;
 }
