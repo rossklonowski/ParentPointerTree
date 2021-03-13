@@ -158,8 +158,11 @@ void unionTest(ParentPointerTree treePar, int node1Par, int node2Par) {
     // time tracking
     clock_t start, end;
     double time_taken;
+
+    std::cout << "\n\nUnion of node testing" << std::endl;
+    std::cout << "-------------------------" << std::endl;
     
-    // weight of node testing
+    // Union of nodes testing
     int node1 = node1Par;
     int node2 = node2Par;
 
