@@ -154,77 +154,79 @@ int main() {
     //int weightsTemp[size];
 
     // initialize the tree
-    int size = 10;
-    int parentsIndexTemp[size];
-    for (int i = 0; i < size; i++) {
-        parentsIndexTemp[i] = i - 1;
+    int size_1 = 10;
+    int parentsIndexTemp_1[size_1];
+    for (int i = 0; i < size_1; i++) {
+        parentsIndexTemp_1[i] = i - 1;
     }
-    std::string labelsTemp[size];
-    for (int i = 0; i < size; i++) {
-        labelsTemp[i] = std::to_string(i);
+    std::string labelsTemp_1[size_1];
+    for (int i = 0; i < size_1; i++) {
+        labelsTemp_1[i] = std::to_string(i);
     }
-    int weightsTemp[size];
+    int weightsTemp_1[size_1];
 
-    // // initialize the tree
-    // int size = 100;
-    // int parentsIndexTemp[size];
-    // for (int i = 0; i < size; i++) {
-    //     parentsIndexTemp[i] = i - 1;
-    // }
-    // std::string labelsTemp[size];
-    // for (int i = 0; i < size; i++) {
-    //     labelsTemp[i] = std::to_string(i);
-    // }
-    // int weightsTemp[size];
+    // initialize the tree
+    int size_2 = 100;
+    int parentsIndexTemp_2[size_2];
+    for (int i = 0; i < size_2; i++) {
+        parentsIndexTemp_2[i] = i - 1;
+    }
+    std::string labelsTemp_2[size_2];
+    for (int i = 0; i < size_2; i++) {
+        labelsTemp_2[i] = std::to_string(i);
+    }
+    int weightsTemp_2[size_2];
 
-    // // initialize the tree
-    // int size = 1000;
-    // int parentsIndexTemp[size];
-    // for (int i = 0; i < size; i++) {
-    //     parentsIndexTemp[i] = i - 1;
-    // }
-    // std::string labelsTemp[size];
-    // for (int i = 0; i < size; i++) {
-    //     labelsTemp[i] = std::to_string(i);
-    // }
-    // int weightsTemp[size];
+    // initialize the tree
+    int size_3 = 1000;
+    int parentsIndexTemp_3[size_3];
+    for (int i = 0; i < size_3; i++) {
+        parentsIndexTemp_3[i] = i - 1;
+    }
+    std::string labelsTemp_3[size_3];
+    for (int i = 0; i < size_3; i++) {
+        labelsTemp_3[i] = std::to_string(i);
+    }
+    int weightsTemp_3[size_3];
 
     // create a new instance of the test tree
-    ParentPointerTree myTree(size, parentsIndexTemp, labelsTemp, weightsTemp);
+    ParentPointerTree myTree1(size_1, parentsIndexTemp_1, labelsTemp_1, weightsTemp_1);
+    ParentPointerTree myTree2(size_2, parentsIndexTemp_2, labelsTemp_2, weightsTemp_2);
+    ParentPointerTree myTree3(size_3, parentsIndexTemp_3, labelsTemp_3, weightsTemp_3);
 
-    // root node testing
-    std::cout << "\n\nRoot Node Tests" << std::endl;
-    std::cout << "-------------------------" << std::endl;
+    // // root node testing
+    // std::cout << "\n\nRoot Node Tests" << std::endl;
+    // std::cout << "-------------------------" << std::endl;
     
-    int startNodeIndex = 0;
+    // int startNodeIndex = 0;
 
-    start = clock();
+    // start = clock();
 
-    startNodeIndex = size - 1;
-    std::cout << "The Root of Node " << myTree.label[startNodeIndex] << "(" << startNodeIndex << ") ";
-    std::cout << "is Node " << myTree.label[myTree.find(startNodeIndex)] << "(" << myTree.find(startNodeIndex) << ")" << std::endl;
+    // startNodeIndex = size_1 - 1;
+    // std::cout << "The Root of Node " << myTree.label[startNodeIndex] << "(" << startNodeIndex << ") ";
+    // std::cout << "is Node " << myTree.label[myTree.find(startNodeIndex)] << "(" << myTree.find(startNodeIndex) << ")" << std::endl;
     
-    end = clock();
-    time_taken = double(end - start) / double(CLOCKS_PER_SEC);
-    std::cout << "Time taken by program is : " << std::fixed << time_taken*100000 << std::setprecision(5)  << "us" << std::endl;
+    // end = clock();
+    // time_taken = double(end - start) / double(CLOCKS_PER_SEC);
+    // std::cout << "Time taken by program is : " << std::fixed << time_taken*100000 << std::setprecision(5)  << "us" << std::endl;
 
-    rootTest(myTree, 0);
+    rootTest(myTree1, 0);
 
-    // weight of node testing
-    std::cout << "\n\nWeight of node testing" << std::endl;
-    std::cout << "-------------------------" << std::endl;
-    int rootNode = 0;
+    // // weight of node testing
+    // std::cout << "\n\nWeight of node testing" << std::endl;
+    // std::cout << "-------------------------" << std::endl;
+    // int rootNode = 0;
     
-    start = clock();
+    // start = clock();
     
-    rootNode = 0;
-    std::cout << "Weight of " << myTree.label[rootNode] << "(" << rootNode << ") is ";
-    std::cout << myTree.weight(rootNode) << std::endl; 
+    // rootNode = 0;
+    // std::cout << "Weight of " << myTree.label[rootNode] << "(" << rootNode << ") is ";
+    // std::cout << myTree.weight(rootNode) << std::endl; 
     
-    end = clock();
-    time_taken = double(end - start) / double(CLOCKS_PER_SEC);
-    std::cout << "Time taken by program is : " << std::fixed << time_taken*100000 << std::setprecision(5)  << "us" << std::endl;
-    std::cout << std::endl;
+    // end = clock();
+    // time_taken = double(end - start) / double(CLOCKS_PER_SEC);
+    // std::cout << "Time taken by program is : " << std::fixed << time_taken*100000 << std::setprecision(5)  << "us" << std::endl;
+    // std::cout << std::endl;
     
     // // weighted union tests
     // std::cout << "\n\nWeighted Union Tests" << std::endl;
